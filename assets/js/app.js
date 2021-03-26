@@ -39,7 +39,7 @@ const baseDeDatos = [
     },
     {
         id: 3,
-        nombre: 'FENDER VINTERA 60S JAZZ MASTER',
+        nombre: 'FENDER VINTERA 60S JAGUAR',
         precio: 20990,
         imagen: 'assets/img/Guitarra Eléctrica Fender.jpg'
     },
@@ -57,13 +57,13 @@ const baseDeDatos = [
     },
     {
         id: 6,
-        nombre: 'LTD DE 6 CUERDAS',
+        nombre: 'ESP LTD RB-1004 BURLED',
         precio: 16000,
         imagen: 'assets/img/LTD.jpg'
     },
     {
         id: 7,
-        nombre: 'YAMAHA ACTIVO 4 CUERDAS',
+        nombre: 'YAMAHA TRBX174EW ',
         precio: 8249,
         imagen: 'assets/img/YAMA.jpg'
     },
@@ -109,11 +109,11 @@ function renderItems() {
         // Precio
         let miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = info['precio'] + '$';
+        miNodoPrecio.textContent = '$' + info['precio'];
         // Boton 
         let miNodoBoton = document.createElement('button');
-        miNodoBoton.classList.add('btn', 'btn-primary');
-        miNodoBoton.textContent = '+';
+        miNodoBoton.classList.add('btn', 'btn-warning');
+        miNodoBoton.textContent = 'Añadir';
         miNodoBoton.setAttribute('marcador', info['id']);
         miNodoBoton.addEventListener('click', anyadirCarrito);
         // Insertamos
@@ -209,3 +209,4 @@ $botonVaciar.addEventListener('click', vaciarCarrito);
 
 // Inicio
 renderItems();
+
